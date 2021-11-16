@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from .predict import predict_kickstart
+from predict import predict_kickstart
 
 
 def create_app():
