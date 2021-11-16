@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Kickstarter Predict</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="/static/assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="/static/assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+	<section id="banner" class="style2"
+		style="background-position: center 0px; background-image: url('/static/images/together.jpg');">
+		<div class="inner">
+			<header class="major">
+				<h1>Kickstarter Success</h1>
+			</header>
+			<div class="content">
+				<p>Using NLP and / or regression techniques, Kickstarter Success can help predict how successful a
+					kickstarter campaign will be based on the monetary goal, description, campaign length, or
+					catagories.</p>
+			</div>
+		</div>
+	</section>
+	<!-- Wrapper -->
+	<div id="wrapper">
+		<!-- Banner -->
+		<section id="banner" class="major" style="height: 100vh; overflow: auto;">
+			<div class="inner">
+				<header class="major">
+					<h1>Predict your Kickstarter</h1>
+				</header>
+				<div class="content">
+					<form action="/flask/user/" method="post">
+						<div style="display:inline-block;">
+							<input type="text" name="goal" placeholder="Goal (USD)">
+						</div>
+						<div style="display:inline-block;">
+							<input type="text" name="duration" placeholder="Campaign Duration (Days)">
+						</div>
+						<div style="display:inline-block;">
+							<select name="category" id="lang">
+								<option value="" disabled selected>Art</option>
+								<option value="category_music">Music</option>
+								<option value="category_crafts">Crafts</option>
+								<option value="category_comics">Comics</option>
+								<option value="category_food">Food</option>
+								<option value="category_publishing">Publishing</option>
+								<option value="category_technology">Tech</option>
+								<option value="category_journalism">Journalism</option>
+								<option value="category_design">Design</option>
+								<option value="category_film & video">Film & Video</option>
+								<option value="category_theater">Theater</option>
+								<option value="category_games">Games</option>
+								<option value="category_photography">Photography</option>
+								<option value="category_fashion">Fashion</option>
+							</select>
+						</div>
+						<div style="display:inline-block;">
+							<select name="country" id="lang">
+								<option value="" disabled selected>Country</option>
+								<option value="javascript">United States</option>
+								<option value="php">Great Britain</option>
+								<option value="java">Canada</option>
+								<option value="java">Other</option>
+							</select>
+						</div>
+						<div style="display:inline-block;">
+							<input type="submit" value="Predict">
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+	</div>
+	<!-- Scripts -->
+	<script src="/static/assets/js/jquery.min.js"></script>
+	<script src="/static/assets/js/jquery.scrolly.min.js"></script>
+	<script src="/static/assets/js/jquery.scrollex.min.js"></script>
+	<script src="/static/assets/js/browser.min.js"></script>
+	<script src="/static/assets/js/breakpoints.min.js"></script>
+	<script src="/static/assets/js/util.js"></script>
+	<script src="/static/assets/js/main.js"></script>
+</body>
+
+</html>
