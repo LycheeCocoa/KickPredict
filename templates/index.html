@@ -39,38 +39,41 @@
 					<h1>Predict your Kickstarter</h1>
 				</header>
 				<div class="content">
-					<form action="/flask/user/" method="post">
+					<form action="/predict/" method="post">
 						<div style="display:inline-block;">
-							<input type="text" name="goal" placeholder="Goal (USD)">
+							<input type="number" name="goal" placeholder="Goal (USD)"
+								style="background-color: #2B304B; border: 0; line-height: 2.6em" required>
 						</div>
 						<div style="display:inline-block;">
-							<input type="text" name="duration" placeholder="Campaign Duration (Days)">
+							<input type="number" name="duration" placeholder="Duration (Days)"
+								style="background-color: #2B304B; border: 0; line-height: 2.6em" required>
 						</div>
 						<div style="display:inline-block;">
-							<select name="category" id="lang">
-								<option value="" disabled selected>Art</option>
-								<option value="category_music">Music</option>
-								<option value="category_crafts">Crafts</option>
-								<option value="category_comics">Comics</option>
-								<option value="category_food">Food</option>
-								<option value="category_publishing">Publishing</option>
-								<option value="category_technology">Tech</option>
-								<option value="category_journalism">Journalism</option>
-								<option value="category_design">Design</option>
-								<option value="category_film & video">Film & Video</option>
-								<option value="category_theater">Theater</option>
-								<option value="category_games">Games</option>
-								<option value="category_photography">Photography</option>
-								<option value="category_fashion">Fashion</option>
+							<select name="category" id="lang" required>
+								<option value="" disabled selected>Category</option>
+								<option value="2">Art</option>
+								<option value="3">Music</option>
+								<option value="4">Crafts</option>
+								<option value="5">Comics</option>
+								<option value="6">Food</option>
+								<option value="7">Publishing</option>
+								<option value="8">Tech</option>
+								<option value="9">Journalism</option>
+								<option value="10">Design</option>
+								<option value="11">Film & Video</option>
+								<option value="12">Theater</option>
+								<option value="13">Games</option>
+								<option value="14">Photography</option>
+								<option value="15">Fashion</option>
 							</select>
 						</div>
 						<div style="display:inline-block;">
-							<select name="country" id="lang">
+							<select name="country" id="lang" required>
 								<option value="" disabled selected>Country</option>
-								<option value="javascript">United States</option>
-								<option value="php">Great Britain</option>
-								<option value="java">Canada</option>
-								<option value="java">Other</option>
+								<option value="16">Great Britain</option>
+								<option value="17">United States</option>
+								<option value="18">Canada</option>
+								<option value="19">Other</option>
 							</select>
 						</div>
 						<div style="display:inline-block;">
@@ -78,6 +81,8 @@
 						</div>
 					</form>
 				</div>
+				{% block content %}
+				{% endblock %}
 			</div>
 		</section>
 	</div>
