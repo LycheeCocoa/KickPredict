@@ -1,14 +1,17 @@
 from flask import Flask, render_template, request
-import random
-import string
+from .predict import predict_kickstart
 
 
 def create_app():
-    app = Flask(__name__, static_url_path='/static')
+    app = Flask(__name__)
 
     # setup for usage w/nginx
     @app.route('/')
     def root():
-        return render_template('landing.html', title="Home")
+        return render_template('index.html', title="Home")
+
+    @app.route('/predict/')
+    def predict():
+        return predict_kickstart()
 
     return app
